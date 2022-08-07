@@ -1,0 +1,19 @@
+extends ./layouts/common.pug
+block append head
+    script(type="text/javascript" src="/scripts/chat.script.js")
+block content 
+    .row.h-100.shadow.p-3.rounded.bg-dark.h-100.text-light
+        .col-sm-2.p-0.border-end
+            h2.text-center.border-bottom.py-2 Users
+            #userContainer
+        .col-sm.p-0
+            .position-relative.h-100
+                h2#roomId.text-center.border-bottom.py-2
+                #textContainer.overflow-auto.m-auto(style="height:80%")
+                form#form.d-flex.justify-content-around.mb-3.w-100.position-absolute.bottom-0.start-0.align-items-center
+                    span Message
+                    input(type="text" class="form-control w-75" id="messageInput")
+                    button.btn.btn-light(type="submit") Send
+                button.btn.btn-light.position-absolute.end-0.top-0#leaveBtn Leave
+
+                    

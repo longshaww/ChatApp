@@ -1,0 +1,14 @@
+extends ./layouts/common.pug
+
+block content
+    .d-flex.h-100.justify-content-center.align-items-center.flex-column
+        h1.mb-5 Messenger Fake
+        form(action="/chat" method="get")
+            .mb-3
+                label.form-label(for='username') Username
+                input#username.form-control(type='text'  name="username")
+            .mb-3
+                label.form-label(for='room') Room
+                input#room.form-control.me-3.mb-3(type='text'  name="room")
+                .text-center
+                    button.btn.btn-dark.me-3(type="submit") Join
